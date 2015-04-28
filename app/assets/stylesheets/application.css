@@ -15,8 +15,6 @@
  */
 
 
-<style>
-
       html, body {
         height: 100%;
       }
@@ -27,7 +25,7 @@
 
       .hero {
         height: 100%;
-        background: url(https://d262ilb51hltx0.cloudfront.net/max/2000/1*hiSr6Y4nQt6DAmJZQMNYOA.png);
+        background: url();
       }
 
       .hero h1 {
@@ -56,4 +54,4 @@
       .article-list {
         padding-top: 72px;
       }
-    </style>
+
