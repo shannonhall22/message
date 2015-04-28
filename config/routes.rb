@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get("/update_post/:id", {:controller => "post", :action => "update"})
 
 #Destroy
-  get("/delete_photo/:id", {:controller => "post", :action => "destroy"})
+  get("/delete_post/:id", {:controller => "post", :action => "destroy"})
 
 
 
