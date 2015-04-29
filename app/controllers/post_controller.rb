@@ -3,14 +3,6 @@ class PostController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-
-    @search = params[:search]
-
-    if @search == ""
-      @post = Post.all
-    else
-      @post = Post.where(@search)
-    end
   end
 
   def new
@@ -28,12 +20,6 @@ class PostController < ApplicationController
 
   def index
     @search = params[:search]
-
-    if @search == ""
-      @post = Post.all
-    else
-      @post = Post.where(@post.contents)
-    end
   end
 
   def edit
