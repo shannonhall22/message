@@ -1,3 +1,13 @@
+<style>
+  .hero {
+        height: 100%;
+        background: url(<%= @post.image_url %>);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+</style>
+
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -25,7 +35,7 @@
 </nav>
 
 
-<div class="hero" style="background:url('<%= @post.image_url %>')">
+<div class="hero">
   <div class="container">
     <h1><%= @post.title %></h1>
   </div>
