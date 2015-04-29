@@ -19,7 +19,7 @@ class PostController < ApplicationController
   end
 
   def index
-    @search = params[:search]
+    @post = Post.all
   end
 
   def edit
