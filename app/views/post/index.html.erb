@@ -9,9 +9,23 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">Message</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/posts/new">New Post <span class="sr-only">(current)</span></a></li>
+      </ul>
+
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
 
 <% @post.each do |posts| %>
   <div class="article-list">
@@ -19,7 +33,7 @@
       <article class="col-md-6 col-md-offset-3">
         <img class="img-responsive" src="<%= posts.image_url %>" alt="<%= posts.title %>">
         <h3><a href="/posts/<%= posts.id %>"><%= posts.title %></a></h3>
-        <h4><%= posts.contents %></h4>
+        <h4><%= truncate(posts.contents, :length => 100, :separator => ' ') %></h4>
         <div class="btn-group" role="group" aria-label="...">
             <a class="btn btn-primary" href="/posts/<%= posts.id %>"><i class="fa fa-search-plus"></i> Show</a>
             <a class="btn btn-warning" href="/posts/<%= posts.id %>/edit"><i class="fa fa-pencil-square-o"></i> Edit</a>
